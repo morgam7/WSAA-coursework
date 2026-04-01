@@ -1,3 +1,9 @@
+from config import config as cfg
+
+apikey = cfg["githubkey"]
+
+
+
 #reading file...
 with open("test.txt", "r") as file:
     content = file.read()
