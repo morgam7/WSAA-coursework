@@ -5,7 +5,7 @@ apikey = cfg["githubkey"]
 
 
 #reading file...
-with open("test.txt", "r") as file:
+with open("Andrew.txt", "r") as file:
     content = file.read()
 
 print(content)
@@ -28,10 +28,20 @@ with open("file.txt", "w") as file:
 
 # change content to content 2 and words in lowercase
 
-content2 = content.replace("this", "that")
+# https://www.geeksforgeeks.org/python/python-replace-multiple-characters-at-once/
 
-print (content2)
+replacements = {"Andrew": "Marcella", "teach": "learn"}
+
+for old, new in replacements.items():
+ content= content.replace(old, new) # had issues here with it only replacing the second word - i needed to keep the changes after the first word
+ # changes so content = content.replace does this
+
+print(content)
+
+# content2 = content.replace("Andrew":"Marcella", "teach":"learn")
+
+
 
 with open("file.txt", "w") as file:
-    file.write(content2)
+    file.write(content)
 
