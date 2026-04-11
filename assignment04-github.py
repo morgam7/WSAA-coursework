@@ -1,47 +1,42 @@
-from config import config as cfg
 
-apikey = cfg["githubkey"]
+from config import config
+import requests
+import base64
+
+# apikey is in config.py
+apikey = config["githubkey"]
+
+url = "https://api.github.com/repos/morgam7/WSAA-coursework/contents/Andrew.txt"
+
+# Get the file data from GitHub
+response = requests.get(url, auth=("token", apikey))
+data = response.json()
+
+# The file content is returned in base64, so decode it to normal text
+content = base64.b64decode(data["content"]).decode("utf-8")
+
+# Replace multiple words in the file text
+replacements = {"Andrew": "Marcella", "teach": "learn"}
+for old, new in replacements.items():
+    content = content.replace(old, new)
+
+# Prepare the updated file data for GitHub
+# The new content must be encoded back into base64
+update_data = {
+    "message": "Replace Andrew with my name",
+    "content": base64.b64encode(content.encode("utf-8")).decode("utf-8"),
+    "sha": data["sha"]
+}
+
+# Send the updated file back to GitHub and create the commit
+response = requests.put(url, auth=("token", apikey), json=update_data)
 
 
+print(response.status_code)
 
-#reading file...
-with open("Andrew.txt", "r") as file:
-    content = file.read()
 
-print(content)
-
-#changing a word in the file
-'''
-content = content.replace("is", "is not")
-
-with open("file.txt", "w") as file:
-    file.write(content)
-
-# Well that didn't work - why didn't just replace is with is not? it reads This not is not a test. try a 
-#different word
-
-content = content.replace("That", "This")
-
-with open("file.txt", "w") as file:
-    file.write(content)
-'''
-
-# change content to content 2 and words in lowercase
 
 # https://www.geeksforgeeks.org/python/python-replace-multiple-characters-at-once/
-
-replacements = {"Andrew": "Marcella", "teach": "learn"}
-
-for old, new in replacements.items():
- content= content.replace(old, new) # had issues here with it only replacing the second word - i needed to keep the changes after the first word
- # changes so content = content.replace does this
-
-print(content)
-
-# content2 = content.replace("Andrew":"Marcella", "teach":"learn")
-
-
-
-with open("file.txt", "w") as file:
-    file.write(content)
-
+# https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
+# https://docs.python.org/3/library/base64.html
+# https://docs.github.com/en/rest/repos/contents?apiVersion=2026-03-10
