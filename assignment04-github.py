@@ -3,7 +3,7 @@ from config import config
 import requests
 import base64
 
-# apikey is in config.py
+# apikey is in config.py - not committed to repo
 apikey = config["githubkey"]
 
 url = "https://api.github.com/repos/morgam7/WSAA-coursework/contents/Andrew.txt"
@@ -34,9 +34,3 @@ response = requests.put(url, auth=("token", apikey), json=update_data)
 
 print(response.status_code)
 
-
-
-# https://www.geeksforgeeks.org/python/python-replace-multiple-characters-at-once/
-# https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
-# https://docs.python.org/3/library/base64.html
-# https://docs.github.com/en/rest/repos/contents?apiVersion=2026-03-10

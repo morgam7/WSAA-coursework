@@ -1,1021 +1,495 @@
-<!DOCTYPE html>
-<!--[if IE 9]> <html lang="en_GB" class="ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en_GB"> <!--<![endif]-->
-  <head>
-    <meta charset="utf-8" />
-      <meta name="generator" content="ckan 2.9.13" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FIQ02 - Exchequer Account (Historical Series) - Dataset - data.gov.ie</title>
-
-    
-    
-
-    
-    <link rel="shortcut icon" href="/img/favicon.ico" />
-    
-
-    <!--[if IE]>
-    <script src="/classList.min.js"></script>
-    <![endif]-->
-
-    
-    
-
-
-    
-      
-          <link rel="alternate" type="text/n3" href="https://data.gov.ie/dataset/a10094b1-29d9-4c52-83f8-6c6661c417b5.n3"/>
-          <link rel="alternate" type="text/turtle" href="https://data.gov.ie/dataset/a10094b1-29d9-4c52-83f8-6c6661c417b5.ttl"/>
-          <link rel="alternate" type="application/rdf+xml" href="https://data.gov.ie/dataset/a10094b1-29d9-4c52-83f8-6c6661c417b5.xml"/>
-          <link rel="alternate" type="application/ld+json" href="https://data.gov.ie/dataset/a10094b1-29d9-4c52-83f8-6c6661c417b5.jsonld"/>
-      
-    
-
-    
-    
-
-
-
-  
-      
-      
-      
-    
-  
-
-
-
-<link rel="stylesheet" href="/styles/impactstories.css">
-
-
-
-
-
-
-
-
-    
-    
-
-
-    
-    
-
-
-    
-  
-  <script>
-   function(){
-       var ct = 0
-       window.addEventListener(
-           "message",
-           (event) => {
-               if (event.origin !== "https://superset.data.gov.ie") return;
-               // For unclear cross-origin reasons, event.source.frameElement isn't
-               // allowed, despite us running in precisely the context that *should* be
-               // allowed to acccess it.
-               // window.frames just gives us a list of the windows, so that's also
-               // not helpful.
-               // Technically, this breaks if someone tries to embed with a frame
-               // rather than an iframe. Don't.
-               for (var frame of document.getElementsByTagName('iframe')) {
-                   if (frame.contentWindow === event.source) {
-                       break;
-                   }
-               }
-               // The second condition can occur if we have a non-iframe embed
-               if (!frame || frame.contentWindow !== event.source) return;
-               
-               var height = event.data.height;
-               // Check that only height is set on event.data
-               if (!height || Object.keys(event.data).length !== 1) return;
-               // Use style.height because it overrides height=, and we've used both in
-               // various locations
-               // UNDONE -- there's a thing pushing out the height when logged in with filters
-               if (ct < 3) {
-                   ct = ct + 1;
-                   frame.style.height = height + "px";
-               }
-           }
-       )
-   }()
-  </script>
-
-  
-  <meta property="og:title" content="FIQ02 - Exchequer Account (Historical Series) - data.gov.ie">
-  <meta property="og:description" content="Exchequer Account (Historical Series)">
-
-
-    
-    <link href="/webassets/ckanext-pages/ff80043b_medium.css" rel="stylesheet"/>
-<link href="/webassets/vendor/f3b8236b_select2.css" rel="stylesheet"/>
-<link href="/webassets/vendor/0b01aef1_font-awesome.css" rel="stylesheet"/>
-<link href="/webassets/base/2471d0b8_main.css" rel="stylesheet"/>
-<link href="/webassets/ckanext-scheming/728ec589_scheming_css.css" rel="stylesheet"/>
-<link href="/webassets/ckanext-featured/0b79b321_featured_css.css" rel="stylesheet"/>
-<link href="/webassets/ckanext-dgithree/4068f437_mailchimp.css" rel="stylesheet"/>
-<link href="/webassets/ckanext-dgithree/be55f5c5_cookieconsent.css" rel="stylesheet"/>
-<link href="/webassets/ckanext-dgithree/c95c4a2d_dgithree.css" rel="stylesheet"/>
-<link href="/webassets/ckanext-dgithree/50ef836a_dgithree_less.css" rel="stylesheet"/>
-<link href="/webassets/ckanext-harvest/c95a0af2_harvest_css.css" rel="stylesheet"/>
-<link href="/webassets/ckanext-geoview/77c3ca23_geo-resource-styles.css" rel="stylesheet"/>
-    
-  </head>
-
-  
-  <body data-site-root="https://data.gov.ie/" data-locale-root="https://data.gov.ie/" >
-
-    
-    <div class="sr-only sr-only-focusable"><a href="#content">Skip to content</a></div>
-  
-
-  
-    
-    
-
-    <nav id="dgi-nav">
-        
-        <div class="container" style="position:relative; z-index:10;">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-collapse" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar" style="background-color: white"></span>
-                    <span class="icon-bar" style="background-color: white"></span>
-                    <span class="icon-bar" style="background-color: white"></span>
-                </button>
-                <a class="brand" href="/"><img style="max-height: 100%; padding: 5px;" src="/img/dgi-logo-new.png" alt="Data.Gov.IE" title="Data.Gov.IE" rel="home"/></a>
-            </div>
-
-
-            <div class="collapse navbar-collapse" id="top-navbar-collapse">
-                <div class="">
-                    <ul class="nav navbar-nav">
-                        <li><a href="/dataset/">Datasets</a></li>
-                        <li><a href="/organization/">Publishers</a></li>
-                        
-                        <li><a href="/dataset/suggest/">Suggest Data</a></li>
-                        <li><a href="/dashboards">Dashboards</a></li>
-                        <li><a href="/contact">Contact</a></li>
-                        <li><a href="/about_page">About</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li role="separator" class="divider"></li>
-                                <li><a href="/faqs">FAQs</a></li>
-
-                                <li role="separator" class="divider"></li>
-
-                                <li><a href="/blog">Latest News</a></li>
-                                <li><a href="/impact/">Impact Stories</a></li>
-                                <li><a href="/haleandhearty">Hale and Hearty</a></li>
-                                <li><a href="/showcase">Showcases</a></li>
-
-                                <li role="separator" class="divider"></li>
-
-                                <li><a href="/resources">Resources & Publications</a></li>
-                                <li><a href="/formats">Formats</a></li>
-
-                                
-                                <li><a href="/pages/re-useofpublicsectorinformation">Re-Use of Public Sector Information</a></li>
-                                
-                                
-                                <li><a href="/license">Open Data Licence </a></li>
-                                
-                                
-                                <li><a href="/resources/open-data-governance-board">Open Data Governance Board</a></li>
-                                
-                                <li role="separator" class="divider"></li>
-
-                                <li><a class="hidden-xs" href="/stats">Stats</a></li>
-                                <li><a href="/broken_links">Broken Links</a></li>
-                                <li><a href="/resources/useful-links">Useful Links</a></li>
-
-<!--                                <li role="separator" class="divider"></li>-->
-<!--                                <li><a href="/qa-report">QA Report</a></li>-->
-<!--                                <li><a href="/kpi-report">KPI Report</a></li>-->
-
-
-                            </ul>
-                        </li>
-                        
-                        
-                        
-<li class="dropdown">
-    <a class="dropdown-toggle" data-toggle="dropdown" role="button" href="#">EN/GA <span
-            class="caret"></span></a>
-    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-        
-        
-        <li><a href="/en_GB/dataset/fiq02-exchequer-account-historical-series">English</a></li>
-        
-        
-        
-        <li><a href="/ga/dataset/fiq02-exchequer-account-historical-series">Gaeilge</a></li>
-        
-        
-    </ul>
-</li>
-                        
-                        
-                        <li><a href="/user/login">Login</a></li>
-                        
-  
-
-          <li><form class="d-flex site-search" action="/site_search/" method="get">
-              <div class="input-group" style="display:inline-flex;">
-                <input id="field-sitewide-search" class="form-control me-2"  type="text" name="q" placeholder="Search Articles, News & Events..." aria-label=" _('Search pages...') }}"/>
-                <span class="input-group-btn">
-                    <button class="btn" type="submit" aria-label="Submit"><span class="fa fa-search"></span></button>
-                </span>
-              </div>
-          </form></li>
-
-                    </ul>
-
-                </div>
-            </div>
-        </div>
-    </nav>
-
-  
-
-<div role="main">
-    <div class="container-fluid no-padding">
-        
-        <div class="toolbar">
-            <div class="container">
-                
-                
-                <ol class="breadcrumb">
-                    
-<li class="home"><a href="/" aria-label="Home"><i class="fa fa-home"></i><span> Home</span></a></li>
-                    
-  
-    
-    
-      
-      
-      <li><a href="/organization/">Publishers</a></li>
-      <li><a href="/organization/department-of-finance">Department of Finance</a></li>
-    
-    <li class="active"><a href="/dataset/fiq02-exchequer-account-historical-series">FIQ02 - Exchequer Account...</a></li>
-  
-
-                </ol>
-                
-                
-            </div>
-        </div>
-        
-    </div>
-
-    <div id="content" class="container">
-        
-        
-        <div class="flash-messages">
-            
-            
-            
-        </div>
-        
-
-        <div class="row wrapper no-nav">
-            
-            
-            
-
-            
-
-            
-            <div class="primary col-xs-12 col-sm-12">
-                
-                
-    
-        
-
-
-
-
-
-
-
-<div class="row">
-    <div class="col-md-8">
-        
-        <h1>
-            
-                FIQ02 - Exchequer Account (Historical Series)
-                
-                
-            
-        </h1>
-
-        
-            
-            
-                    
-        
-
-        
-            <div class="dataset-top-meta" style="font-size: 1em;">
-                <div>
-                    <h5>
-                        
-                            Published by: <strong>
-                            <a href="/organization/department-of-finance">
-                                Department of Finance
-                            </a></strong>
-                        
-
-                        
-
-                    </h5>
-                </div>
-
-                <div>
-                    <h5 property="dc:rights">
-                        
-                            
-                            
-                                Licensed under: <strong><a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0</a></strong>
-                            
-                        
-                    </h5>
-                </div>
-
-                <div>
-                    <h5>Category:
-                        <a href="/dataset?theme=Government">
-                            <strong class="theme-color-government">
-                                Government
-                            </strong>
-                        </a>
-                    </h5>
-                </div>
-
-                <div>
-                    <h5>Views: <strong>256</strong></h5>
-                </div>
-
-                <div>
-                    <h5>Openness rating: 
-<div class="qa openness-3">
-    
-        <span title="One of the resource formats is 3-star data - machine-readable data in an open format." data-toggle="tooltip">
-            
-<span class="star-rating"><span class="star-rating-stars"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star-o"></span><span class="fa fa-star-o"></span></span></span> <br>
-    
-</div></h5>
-                </div>
-
-
-            </div>
-        
-
-    </div>
-
-    
-        
-        <div class="col-md-4 hidden-sm hidden-xs" id="actionPanel">
-            <div class="panel panel-dataset-actions">
-                <a data-toggle="collapse" data-parent="#actionPanel" href="#actions">
-                    <div class="panel-heading">
-                        <h3 class="panel-title"><span class="fa fa-chevron-down"></span> Dataset Actions</h3>
-                    </div>
-                </a>
-                <ul class="list-group list-group-collapse panel-collapse collapse" id="actions">
-
-                    
-                    
-                    
-                    
-                    
-                    
-
-                    
-                    
-
-                    
-                    
-
-                    
-                    
-
-                    
-                    
-
-                    
-                    
-
-                    
-                    <li class="list-group-item">
-                        <span class="fa fa-newspaper-o"></span>
-                        <a href="/dataset/showcases/fiq02-exchequer-account-historical-series">View showcases with this dataset</a>
-                    </li>
-
-                    
-                    
-                        <li class="list-group-item">
-                            <span class="fa fa-reply"></span>
-                            <a href="mailto:nat_acc@cso.ie">Contact dataset owner</a>
-                        </li>
-                    
-
-                    
-                </ul>
-            </div>
-        </div>
-        
-    
-</div>
-
-<div class="row">
-    <div class="col-md-12 lolwhut">
-
-    <div class="notes embedded-content">
-      <p>Exchequer Account (Historical Series)</p>
-    </div>
-  
-
-    </div>
-</div>
-    
-
-    
-        
-    <style>
-        .hidden {
-            display: none
-        }
-    </style>
-    <script>
-        function toggleDashboard(id) {
-            $("#dashboard" + id).toggleClass('hidden')
-            var link = $("#dashboardtoggle" + id)
-            if (link.text().includes("Show")) {
-                link.text(" (Hide) ")
-            } else {
-                link.text(" (Show) ")
-            }
-        }
-    </script>
-    
-    <h5>Public Dashboards</h5>
-    
-      
-        No dashboard exists for this dataset.
-      
-    
-    
-
-        
-
-
-
-<section id="dataset-resources" class="resources">
-    <h2>Data Resources (4)</h2>
-    
-    <div class="row">
-        
-            <div class="col-sm-6">
-                <div class="dataset-resource">
-                    <div class="dataset-resource-format col-md-2">
-                        <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                        <span class="format-name">
-                            
-                                CSV
-                            
-                        </span>
-                    </div>
-                    <div class="dataset-resource-text col-md-7">
-                        
-                        
-
-                        
-
-                        
-                            <div>
-                                Exchequer Account (Historical Series)
-                            </div>
-                        
-                    </div>
-                    <div class="dataset-resource-buttons col-md-3">
-                        <a class="btn btn-lg btn-info btn-block" href="/dataset/fiq02-exchequer-account-historical-series/resource/5df9d9b4-5853-482d-bd9f-b09961962c09">
-                            
-                                Preview
-                                <i class="fa fa-eye" aria-hidden="true"></i>
-                            
-
-                        </a>
-                        <a target="_blank" download class="resource-url-analytics btn btn-lg btn-primary btn-block btn-download" href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/FIQ02/CSV/1.0/en">
-                            Download
-                            <i class="fa fa-download" aria-hidden="true"></i>&nbsp;
-                        </a>
-                    </div><!--/dropdown-->
-                </div><!-- /dataset-resource -->
-            </div><!-- /col-sm-6 -->
-        
-            <div class="col-sm-6">
-                <div class="dataset-resource">
-                    <div class="dataset-resource-format col-md-2">
-                        <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                        <span class="format-name">
-                            
-                                JSON-STAT
-                            
-                        </span>
-                    </div>
-                    <div class="dataset-resource-text col-md-7">
-                        
-                        
-
-                        
-
-                        
-                            <div>
-                                Exchequer Account (Historical Series)
-                            </div>
-                        
-                    </div>
-                    <div class="dataset-resource-buttons col-md-3">
-                        <a class="btn btn-lg btn-info btn-block" href="/dataset/fiq02-exchequer-account-historical-series/resource/24833b36-fede-4e00-bf8d-f08c3e2abf10">
-                            
-                                Preview
-                                <i class="fa fa-eye" aria-hidden="true"></i>
-                            
-
-                        </a>
-                        <a target="_blank" download class="resource-url-analytics btn btn-lg btn-primary btn-block btn-download" href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/FIQ02/JSON-stat/1.0/en">
-                            Download
-                            <i class="fa fa-download" aria-hidden="true"></i>&nbsp;
-                        </a>
-                    </div><!--/dropdown-->
-                </div><!-- /dataset-resource -->
-            </div><!-- /col-sm-6 -->
-        
-            <div class="col-sm-6">
-                <div class="dataset-resource">
-                    <div class="dataset-resource-format col-md-2">
-                        <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                        <span class="format-name">
-                            
-                                PX
-                            
-                        </span>
-                    </div>
-                    <div class="dataset-resource-text col-md-7">
-                        
-                        
-
-                        
-
-                        
-                            <div>
-                                Exchequer Account (Historical Series)
-                            </div>
-                        
-                    </div>
-                    <div class="dataset-resource-buttons col-md-3">
-                        <a class="btn btn-lg btn-info btn-block" href="/dataset/fiq02-exchequer-account-historical-series/resource/c271be80-97ae-425c-8557-93801474b8b0">
-                            
-                                Details
-                                <i class="fa fa-search" aria-hidden="true"></i>
-                            
-
-                        </a>
-                        <a target="_blank" download class="resource-url-analytics btn btn-lg btn-primary btn-block btn-download" href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/FIQ02/PX/2013/en">
-                            Download
-                            <i class="fa fa-download" aria-hidden="true"></i>&nbsp;
-                        </a>
-                    </div><!--/dropdown-->
-                </div><!-- /dataset-resource -->
-            </div><!-- /col-sm-6 -->
-        
-            <div class="col-sm-6">
-                <div class="dataset-resource">
-                    <div class="dataset-resource-format col-md-2">
-                        <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                        <span class="format-name">
-                            
-                                XLSX
-                            
-                        </span>
-                    </div>
-                    <div class="dataset-resource-text col-md-7">
-                        
-                        
-
-                        
-
-                        
-                            <div>
-                                Exchequer Account (Historical Series)
-                            </div>
-                        
-                    </div>
-                    <div class="dataset-resource-buttons col-md-3">
-                        <a class="btn btn-lg btn-info btn-block" href="/dataset/fiq02-exchequer-account-historical-series/resource/d4948877-3566-42c4-9a71-18dbe3d6d09e">
-                            
-                                Preview
-                                <i class="fa fa-eye" aria-hidden="true"></i>
-                            
-
-                        </a>
-                        <a target="_blank" download class="resource-url-analytics btn btn-lg btn-primary btn-block btn-download" href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/FIQ02/XLSX/2007/en">
-                            Download
-                            <i class="fa fa-download" aria-hidden="true"></i>&nbsp;
-                        </a>
-                    </div><!--/dropdown-->
-                </div><!-- /dataset-resource -->
-            </div><!-- /col-sm-6 -->
-        
-        <script>
-         document.addEventListener("DOMContentLoaded", function () {
-             $('.btn-download').click(function () {
-                 ga('send','event','resource','download',this.href);
-//                 (function(t,e,o,s){var n,c,i;t.SMCX=t.SMCX||[],e.getElementById(s)||(n=e.getElementsByTagName(o),c=n[n.length-1],i=e.createElement(o),i.type='text/javascript',i.async=!0,i.id=s,i.src=['https:'===location.protocol?'https://':'http://','widget.surveymonkey.com/collect/website/js/CdrsDz1uZCTspxjcmPdhGl6YR9nJOgYFRsdDLkdKevEmlNWAaW8M4S2i0drsqCEE.js'].join(''),c.parentNode.insertBefore(i,c))})(window,document,'script','smcx-sdk');
-             })
-         });
-        </script>
-
-    </div>
-
-</section>
-    
-
-    
-
-
-
-
-        
-            <div class="dataset-resource-preview">
-                
-                    <h2>Data Resource Preview - <a href="/dataset/a10094b1-29d9-4c52-83f8-6c6661c417b5/resource/24833b36-fede-4e00-bf8d-f08c3e2abf10">Exchequer Account (Historical Series)</a></h2>
-                
-
-                
-
-                <iframe src="https://data.gov.ie/dataset/fiq02-exchequer-account-historical-series/resource/24833b36-fede-4e00-bf8d-f08c3e2abf10/view/b2092fee-b662-4b5e-86af-27a6577edb09" frameborder="0" width="100%" style="min-height: 500px;">
-                    <p>Your browser does not support iframes.</p>
-                </iframe>
-
-            </div>
-        
-
-    
-
-    
-        
-
-  <section class="tags">
-    
-
-
-  <ul class="tag-list well">
-    
-      <li>
-        <a class="tag" href="/dataset/?tags=FIQ02">FIQ02</a>
-      </li>
-    
-      <li>
-        <a class="tag" href="/dataset/?tags=cso">cso</a>
-      </li>
-    
-      <li>
-        <a class="tag" href="/dataset/?tags=finance">finance</a>
-      </li>
-    
-  </ul>
-
-  </section>
-
-    
-
-    
-  
-     
-
-    <section class="additional-info table-responsive">
-        <table class="table table-hover table-dgi">
-            <tbody>
-                <tr>
-                            <th scope="row" class="dataset-label" style="white-space: normal">Data Owner </th>
-                            <td class="dataset-details">Paul Sheridan</td>
-                        </tr><tr>
-                            <th scope="row" class="dataset-label" style="white-space: normal">Data Owner Email </th>
-                            <td class="dataset-details"><a href=mailto:nat_acc@cso.ie>nat_acc@cso.ie</a></td>
-                        </tr><tr>
-                            <th scope="row" class="dataset-label" style="white-space: normal">Data Owner Telephone </th>
-                            <td class="dataset-details">(+353) 1 498 4380</td>
-                        </tr><tr>
-                            <th scope="row" class="dataset-label" style="white-space: normal">Theme </th>
-                            <td class="dataset-details">Government</td>
-                        </tr><tr>
-                            <th scope="row" class="dataset-label" style="white-space: normal">Date updated </th>
-                            <td class="dataset-details">
-  2020-05-19
-</td>
-                        </tr><tr>
-                            <th scope="row" class="dataset-label" style="white-space: normal">Language </th>
-                            <td class="dataset-details">English</td>
-                        </tr><tr>
-                            <th scope="row" class="dataset-label" style="white-space: normal">Landing page </th>
-                            <td class="dataset-details"><a href="https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/FIQ02/JSON-stat/2.0/en" rel="" target="_blank">https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/FIQ02/JSON-stat/2.0/en</a></td>
-                        </tr>
-            </tbody>
-        </table>
-        
-    </section>
-    
-
-
-
-    
-      
-                        
-                      
-                        
-        <!-- Survey Modal -->
-
-
-<style>
-
-    #surveyModal .btn a {
-        color: white;
-        text-decoration: none;
-    }
-
-    #surveyModal .btn a:hover {
-        text-decoration: none;
-    }
-
-    #surveyModal .modal-header {
-        background-color: #01aef0;
-        color: black;
-
-    }
-
-    #surveyModal .modal-title {
-        text-transform: uppercase;
-        color: white;
-        font-weight: 700;
-    }
-
-    #surveyModal .modal {
-        top: 160px;
-    }
-
-    #surveyModal .modal-sm {
-        width: 480px;
-        margin-top: 160px;
-    }
-
-    .modal-backdrop {
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 1 !important;
-        background-color: transparent;
-    }
-
-    .modal-backdrop in {
-        opacity: 0 !important;
-    }
-
-    .modal-helptext {
-        font-size: 0.8em;
-        float: right;
-    }
-
-    .btn-survey-yes {
-        background-color: #01aef0 !important;
-        width: 120px;
-        text-align: center;
-    }
-
-    .btn-survey-yes:hover {
-        background-color: #00a4e3;
-    }
-</style>
-
-
-
-<div id="surveyModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog modal-sm" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                </button>
-                <h4 class="center modal-title" id="myModalLabel">Help us improve Open Data</h4>
-            </div>
-            <div class="modal-body">
-                <div class="modal-text center">Help us measure open data impact by taking our short survey. We would love to find out more about how Open Data from data.gov.ie is being used,so that we can continue to improve the quality and relevance of datasets being published. All questions are optional.<br><br><span
-                        class="modal-helptext">Completion time: 3 mins</span></div>
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default btn-survey-no" data-dismiss="modal">No</button>
-                
-                <button type="button" class="btn btn-primary btn-survey-yes"><a target="_blank"
-                                                                                href="https://ec.europa.eu/eusurvey/runner/opendatasurvey">Give Feedback</a>
-                </button>
-                
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-
-    document.addEventListener("DOMContentLoaded", function () {
-            $('.resource-url-analytics').click(function () {
-                if (document.cookie.indexOf("name") > 0) {
-//                    console.log("Cookie present, not offering survey")
-                }
-                else {
-                    var CookieDate = new Date;
-                    CookieDate.setFullYear(CookieDate.getFullYear() + 10);
-                    document.cookie = "name=surveyed; expires=" + CookieDate.toUTCString() + "; path=/";
-                    $('#surveyModal').modal('show');
-                }
-            })
-        }
-    );
-</script>
-    
-
-
-
-            </div>
-            
-        </div>
-        
-    </div>
-</div>
-
-    
-<div class="footer">
-    
-    <div class="container container-front">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="contact-details">
-                    <div class="col-md-4">
-                        <h3 class="footer-header">Contact Information</h3>
-                        <address>
-                            Open Data Unit<br/>
-                            <a style="color:#fff;" href="http://per.gov.ie">Department of Public Expenditure Infrastructure Public Service Reform and Digitalisation</a>,<br/>
-                            St. Stephen’s Green House,<br/>
-                            Earlsfort Terrace,
-                            D02 PH42
-                            Dublin 2
-                            Ireland.
-                        </address>
-                        <br>
-                        <div>
-                            <a href="mailto:opendata@per.gov.ie">
-                                <p><span class="fa fa-envelope"></span> opendata@per.gov.ie </p>
-                            </a>
-                        </div>
-
-                        <div>
-                            <a href="tel:35316767571">
-                                <p><span class="fa fa-phone"></span> +353 1 6767571 </p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <h3 class="footer-header">Give us feedback</h3>
-                        <p>The Open Data Unit values your feedback, questions or comments. We are always delighted to hear from you.</p>
-                        <div>
-                            
-                            <button class="btn btn-danger btn-feedback"><a style="color:#fff;" href="/contact">GIVE US FEEDBACK</a></button>
-                            
-
-                        </div>
-                        <br>
-                        <div>
-                            <a href="https://www.linkedin.com/company/dper/posts/?feedView=all">
-                                <p><span class="fa fa-linkedin"></span> DPER LinkedIn </p>
-                            </a>
-                        </div>
-
-                    </div>
-                    <div class="col-md-4">
-                        <h3 class="footer-header"> </h3>
-                        <div>
-                            <p>Powered by
-                                <a href="http://ckan.org"><img id="ckan-logo" src="/img/ckan-logo.png"
-                                                               alt="CKAN logo"/></a>
-                            </p>
-                            <p>Site by
-                                <a style="color:#fff;" href="https://derilinx.com"><img id="derilinx-logo" src="/img/derilinxthumb.png"
-                                                                                        alt="Derilinx logo"/>Derilinx</a>
-                            </p>
-                            <p><a style="color:#fff;" href="/pages/cookie-and-privacy-policy">Cookie & Privacy Policy</a></p>
-                            <p><a style="color:#fff;" href="/pages/accessibility">Accessibility</a></p>
-                            <br><br>
-                            <p>
-                                <img src="/img/footer_white_logo_2.png" alt="" class="img img-responsive"
-                                     style="max-width:80%;max-height:100px;margin-left:-24px">
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-  
-  
-  
-  
-  
-  
-
-    
-<script src="https://cdn.usefathom.com/script.js" data-site="TWPPJEGW" defer></script>
-
-
-<!--Force the navbar to be narrower due to extra chars in GA strings-->
-
-
-<!--End force-->
-
-<!--Multilingual cookie/consent text-->
-
-
-
-
-<script type="text/javascript">
-    function getCookie(cname) {
-        let name = cname + "=";
-        let decodedCookie = decodeURIComponent(document.cookie);
-        let ca = decodedCookie.split(';');
-        for (let i = 0; i < ca.length; i++) {
-            let c = ca[i];
-            while (c.charAt(0) == ' ') {
-                c = c.substring(1);
-            }
-            if (c.indexOf(name) == 0) {
-                return c.substring(name.length, c.length);
-            }
-        }
-        return "";
-    }
-    
-    //<!--google analytics-->
-    if (getCookie("accept-cookie-policy") === "all" || getCookie("accept-cookie-policy") === "analytics") {
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-        ga('create', 'UA-59685031-1', 'auto');
-        ga('set', 'anonymizeIp', true);
-        ga('send', 'pageview');
-    };
-
-</script>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0NBPSTCVM1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-0NBPSTCVM1');
-</script>
-
-
-
-  
-    
-      
-  
-
-      
-
-    
-    
-    
-    <script src="/webassets/vendor/d8ae4bed_jquery.js" type="text/javascript"></script>
-<script src="/webassets/vendor/fb6095a0_vendor.js" type="text/javascript"></script>
-<script src="/webassets/vendor/580fa18d_bootstrap.js" type="text/javascript"></script>
-<script src="/webassets/base/15a18f6c_main.js" type="text/javascript"></script>
-<script src="/webassets/ckanext-pages/68633da1_medium.js" type="text/javascript"></script>
-<script src="/webassets/base/54c75ef1_ckan.js" type="text/javascript"></script>
-<script src="/webassets/ckanext-dgithree/921a4abb_cookieconsent.js" type="text/javascript"></script>
-  </body>
-</html>
+{
+  "class": "dataset",
+  "dimension": {
+    "STATISTIC": {
+      "category": {
+        "index": [
+          "FIQ02"
+        ],
+        "label": {
+          "FIQ02": "Exchequer Account (Historical Series)"
+        },
+        "unit": {
+          "FIQ02": {
+            "decimals": 1,
+            "label": "Euro Million",
+            "position": "end"
+          }
+        }
+      },
+      "label": "Statistic"
+    },
+    "C02568V03113": {
+      "category": {
+        "index": [
+          "05",
+          "06"
+        ],
+        "label": {
+          "05": "Building Societies deposits and shares",
+          "06": "Post Office and TSB deposits"
+        }
+      },
+      "label": "Item"
+    },
+    "TLIST(Q1)": {
+      "category": {
+        "index": [
+          "19751",
+          "19752",
+          "19753",
+          "19754",
+          "19761",
+          "19762",
+          "19763",
+          "19764",
+          "19771",
+          "19772",
+          "19773",
+          "19774",
+          "19781",
+          "19782",
+          "19783",
+          "19784",
+          "19791",
+          "19792",
+          "19793",
+          "19794",
+          "19801",
+          "19802",
+          "19803",
+          "19804",
+          "19811",
+          "19812",
+          "19813",
+          "19814",
+          "19821",
+          "19822",
+          "19823",
+          "19824",
+          "19831",
+          "19832",
+          "19833",
+          "19834",
+          "19841",
+          "19842",
+          "19843",
+          "19844",
+          "19851",
+          "19852",
+          "19853",
+          "19854",
+          "19861",
+          "19862",
+          "19863",
+          "19864",
+          "19871",
+          "19872",
+          "19873",
+          "19874",
+          "19881",
+          "19882",
+          "19883",
+          "19884",
+          "19891",
+          "19892",
+          "19893",
+          "19894",
+          "19901",
+          "19902",
+          "19903",
+          "19904",
+          "19911",
+          "19912",
+          "19913",
+          "19914",
+          "19921",
+          "19922",
+          "19923",
+          "19924",
+          "19931",
+          "19932",
+          "19933",
+          "19934",
+          "19941",
+          "19942",
+          "19943",
+          "19944",
+          "19951",
+          "19952",
+          "19953",
+          "19954",
+          "19961",
+          "19962",
+          "19963",
+          "19964",
+          "19971",
+          "19972",
+          "19973",
+          "19974"
+        ],
+        "label": {
+          "19751": "1975Q1",
+          "19752": "1975Q2",
+          "19753": "1975Q3",
+          "19754": "1975Q4",
+          "19761": "1976Q1",
+          "19762": "1976Q2",
+          "19763": "1976Q3",
+          "19764": "1976Q4",
+          "19771": "1977Q1",
+          "19772": "1977Q2",
+          "19773": "1977Q3",
+          "19774": "1977Q4",
+          "19781": "1978Q1",
+          "19782": "1978Q2",
+          "19783": "1978Q3",
+          "19784": "1978Q4",
+          "19791": "1979Q1",
+          "19792": "1979Q2",
+          "19793": "1979Q3",
+          "19794": "1979Q4",
+          "19801": "1980Q1",
+          "19802": "1980Q2",
+          "19803": "1980Q3",
+          "19804": "1980Q4",
+          "19811": "1981Q1",
+          "19812": "1981Q2",
+          "19813": "1981Q3",
+          "19814": "1981Q4",
+          "19821": "1982Q1",
+          "19822": "1982Q2",
+          "19823": "1982Q3",
+          "19824": "1982Q4",
+          "19831": "1983Q1",
+          "19832": "1983Q2",
+          "19833": "1983Q3",
+          "19834": "1983Q4",
+          "19841": "1984Q1",
+          "19842": "1984Q2",
+          "19843": "1984Q3",
+          "19844": "1984Q4",
+          "19851": "1985Q1",
+          "19852": "1985Q2",
+          "19853": "1985Q3",
+          "19854": "1985Q4",
+          "19861": "1986Q1",
+          "19862": "1986Q2",
+          "19863": "1986Q3",
+          "19864": "1986Q4",
+          "19871": "1987Q1",
+          "19872": "1987Q2",
+          "19873": "1987Q3",
+          "19874": "1987Q4",
+          "19881": "1988Q1",
+          "19882": "1988Q2",
+          "19883": "1988Q3",
+          "19884": "1988Q4",
+          "19891": "1989Q1",
+          "19892": "1989Q2",
+          "19893": "1989Q3",
+          "19894": "1989Q4",
+          "19901": "1990Q1",
+          "19902": "1990Q2",
+          "19903": "1990Q3",
+          "19904": "1990Q4",
+          "19911": "1991Q1",
+          "19912": "1991Q2",
+          "19913": "1991Q3",
+          "19914": "1991Q4",
+          "19921": "1992Q1",
+          "19922": "1992Q2",
+          "19923": "1992Q3",
+          "19924": "1992Q4",
+          "19931": "1993Q1",
+          "19932": "1993Q2",
+          "19933": "1993Q3",
+          "19934": "1993Q4",
+          "19941": "1994Q1",
+          "19942": "1994Q2",
+          "19943": "1994Q3",
+          "19944": "1994Q4",
+          "19951": "1995Q1",
+          "19952": "1995Q2",
+          "19953": "1995Q3",
+          "19954": "1995Q4",
+          "19961": "1996Q1",
+          "19962": "1996Q2",
+          "19963": "1996Q3",
+          "19964": "1996Q4",
+          "19971": "1997Q1",
+          "19972": "1997Q2",
+          "19973": "1997Q3",
+          "19974": "1997Q4"
+        }
+      },
+      "label": "Quarter"
+    }
+  },
+  "extension": {
+    "matrix": "FIQ02",
+    "language": {
+      "code": "en",
+      "name": "English"
+    },
+    "elimination": {
+      "C02568V03113": null
+    },
+    "contact": {
+      "name": "Paul Sheridan",
+      "email": "nat_acc@cso.ie",
+      "phone": "(+353) 1 498 4380"
+    },
+    "subject": {
+      "code": 31,
+      "value": "Finance"
+    },
+    "product": {
+      "code": "FI",
+      "value": "Financial Indicators"
+    },
+    "official": true,
+    "copyright": {
+      "name": "Department of Finance",
+      "code": "DOF",
+      "href": "https://www.gov.ie/en/organisation/department-of-finance/"
+    },
+    "exceptional": false,
+    "reservation": false,
+    "archive": true,
+    "experimental": false,
+    "analytical": false
+  },
+  "href": "https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/FIQ02/PX/2013/en",
+  "id": [
+    "STATISTIC",
+    "C02568V03113",
+    "TLIST(Q1)"
+  ],
+  "label": "Exchequer Account (Historical Series)",
+  "link": {
+    "alternate": [
+      {
+        "type": "text/csv",
+        "href": "https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/FIQ02/CSV/1.0/en"
+      },
+      {
+        "type": "application/json",
+        "href": "https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/FIQ02/JSON-stat/2.0/en"
+      },
+      {
+        "type": "application/json",
+        "href": "https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/FIQ02/JSON-stat/1.0/en"
+      },
+      {
+        "type": "application/base64",
+        "href": "https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/FIQ02/XLSX/2007/en"
+      }
+    ]
+  },
+  "note": [
+    "",
+    "For more information, please go to the [url=https://www.cso.ie/en/statistics/nationalaccounts/]statistical release page[/url] on our website."
+  ],
+  "role": {
+    "metric": [
+      "STATISTIC"
+    ],
+    "time": [
+      "TLIST(Q1)"
+    ]
+  },
+  "size": [
+    1,
+    2,
+    92
+  ],
+  "updated": "2020-05-19T11:00:00Z",
+  "value": [
+    284.0,
+    310.6,
+    335.7,
+    363.5,
+    393.7,
+    423.3,
+    455.6,
+    479.7,
+    512.5,
+    543.3,
+    582.2,
+    630.9,
+    662.5,
+    699.1,
+    740.0,
+    803.2,
+    900.4,
+    982.9,
+    1053.4,
+    1129.4,
+    1190.4,
+    1262.2,
+    1357.2,
+    1470.6,
+    1542.7,
+    1615.7,
+    1693.3,
+    1790.1,
+    1872.5,
+    1962.4,
+    2062.1,
+    2172.9,
+    2266.4,
+    2367.4,
+    2475.5,
+    2578.5,
+    2670.0,
+    2763.0,
+    2873.7,
+    3016.5,
+    3108.6,
+    3233.3,
+    3341.6,
+    3440.6,
+    3463.7,
+    3571.8,
+    3658.6,
+    3755.1,
+    3811.4,
+    3900.8,
+    3999.7,
+    4121.6,
+    4177.8,
+    4235.5,
+    4294.4,
+    4449.2,
+    4511.8,
+    4612.6,
+    4694.1,
+    4837.7,
+    4846.1,
+    4909.8,
+    5154.4,
+    5457.8,
+    5651.0,
+    5826.8,
+    6022.9,
+    6295.4,
+    6541.2,
+    6920.5,
+    7052.0,
+    7250.1,
+    7385.7,
+    7572.3,
+    7768.0,
+    8139.9,
+    8299.0,
+    8542.4,
+    8732.8,
+    9158.1,
+    9152.3,
+    9278.4,
+    9419.3,
+    9632.9,
+    9638.6,
+    9777.0,
+    9798.6,
+    10413.1,
+    11119.1,
+    11492.4,
+    null,
+    null,
+    328.9,
+    339.5,
+    351.2,
+    360.4,
+    380.8,
+    409.7,
+    452.4,
+    420.8,
+    433.6,
+    466.6,
+    488.6,
+    527.7,
+    556.3,
+    544.8,
+    558.3,
+    560.0,
+    576.3,
+    591.1,
+    594.0,
+    598.9,
+    605.5,
+    613.4,
+    632.8,
+    665.0,
+    706.5,
+    734.4,
+    746.2,
+    751.4,
+    788.5,
+    809.2,
+    834.6,
+    859.1,
+    882.7,
+    896.2,
+    949.1,
+    967.9,
+    1024.3,
+    1072.4,
+    1120.2,
+    1124.1,
+    1170.2,
+    1206.6,
+    1269.0,
+    1289.0,
+    1258.4,
+    1270.0,
+    1289.9,
+    1285.4,
+    1308.3,
+    1328.1,
+    1363.7,
+    1387.3,
+    1409.0,
+    1420.6,
+    1430.4,
+    1437.0,
+    1434.8,
+    1432.4,
+    1449.9,
+    1438.7,
+    1414.9,
+    1447.2,
+    1472.4,
+    1482.0,
+    1507.3,
+    1538.5,
+    1566.9,
+    1556.3,
+    515.5,
+    521.6,
+    524.7,
+    524.0,
+    524.1,
+    559.2,
+    595.4,
+    600.5,
+    608.7,
+    610.4,
+    614.9,
+    614.6,
+    613.3,
+    598.3,
+    595.5,
+    590.9,
+    599.3,
+    604.4,
+    605.7,
+    599.3,
+    598.0,
+    595.5,
+    595.5,
+    589.2
+  ],
+  "version": "2.0"
+}
