@@ -50,15 +50,15 @@ This assignment involved several practical issues while working with the GitHub 
 
 I used the module lecture notes and class materials as a guide when completing these assignments, along with the code in the course repository available [here](https://github.com/andrewbeattycourseware/wsaa-courseware). I also used ChatGPT as an AI support tool for debugging and figuring out why my code wasn't working.
 
-Deck of Cards API. Available at: https://deckofcardsapi.com/
-Central Statistics Office (CSO) Ireland, Exchequer Account (Historical Series), dataset FIQ02. Available via the CSO / PxWeb API./
-GitHub REST API documentation. Available at: https://docs.github.com/en/rest/
-Requests: https://realpython.com/python-requests/
-https://www.geeksforgeeks.org/python/python-replace-multiple-characters-at-once/
-https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens/
-https://docs.python.org/3/library/base64.html/
-https://docs.github.com/en/rest/repos/contents?apiVersion=2026-03-10/
-https://www.geeksforgeeks.org/python/counters-in-python-set-1/
+Deck of Cards API. Available at: https://deckofcardsapi.com  
+Central Statistics Office (CSO) Ireland, Exchequer Account (Historical Series), dataset FIQ02. Available via the CSO / PxWeb API.  
+GitHub REST API documentation. Available at: https://docs.github.com/en/rest  
+Requests: https://realpython.com/python-requests  
+https://www.geeksforgeeks.org/python/python-replace-multiple-characters-at-once  
+https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens  
+https://docs.python.org/3/library/base64.html  
+https://docs.github.com/en/rest/repos/contents?apiVersion=2026-03-10  
+https://www.geeksforgeeks.org/python/counters-in-python-set-1  
 
 
 
