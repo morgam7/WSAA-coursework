@@ -1,10 +1,10 @@
 # Weekly Assignments
 
-![Panda Eating Computer](panda_eating_laptop.png)
+![Python Projects](image.png)
 
 This is the repository containing all the weekly assignments for the Web Services and Applications module of the [Higher Diploma in Science in Data Analytics given by ATU Galway-Mayo](https://www.gmit.ie/higher-diploma-in-science-in-computing-in-data-analytics). My lecturer is [Andrew Beatty](https://github.com/andrewbeattycourseware?tab=overview&from=2022-12-01&to=2022-12-31). The focus of the assignments is on interacting with APIs, handling JSON data, automating file changes, and using GitHub as part of a development workflow.
 
-To create this repository, I installed Python using [Anaconda](https://www.anaconda.com/download), and I used [Visual Studio Code](https://code.visualstudio.com/) as a text editor and terminal. The image of the panda eating a computer was generated using OpenAI's DALL·E.
+To create this repository, I installed Python using [Anaconda](https://www.anaconda.com/download), and I used [Visual Studio Code](https://code.visualstudio.com/) as a text editor and terminal.
 
 ## Getting Started
 
@@ -50,15 +50,15 @@ This assignment involved several practical issues while working with the GitHub 
 
 I used the module lecture notes and class materials as a guide when completing these assignments, along with the code in the course repository available [here](https://github.com/andrewbeattycourseware/wsaa-courseware). I also used ChatGPT as an AI support tool for debugging and figuring out why my code wasn't working.
 
-Deck of Cards API. Available at: https://deckofcardsapi.com\
-Central Statistics Office (CSO) Ireland, Exchequer Account (Historical Series), dataset FIQ02. Available via the CSO / PxWeb API.
-GitHub REST API documentation. Available at: https://docs.github.com/en/rest\
-Requests: https://realpython.com/python-requests/\
-https://www.geeksforgeeks.org/python/python-replace-multiple-characters-at-once/\
-https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens\
-https://docs.python.org/3/library/base64.html\
-https://docs.github.com/en/rest/repos/contents?apiVersion=2026-03-10\
-https://www.geeksforgeeks.org/python/counters-in-python-set-1/\
+Deck of Cards API. Available at: https://deckofcardsapi.com/
+Central Statistics Office (CSO) Ireland, Exchequer Account (Historical Series), dataset FIQ02. Available via the CSO / PxWeb API./
+GitHub REST API documentation. Available at: https://docs.github.com/en/rest/
+Requests: https://realpython.com/python-requests/
+https://www.geeksforgeeks.org/python/python-replace-multiple-characters-at-once/
+https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens/
+https://docs.python.org/3/library/base64.html/
+https://docs.github.com/en/rest/repos/contents?apiVersion=2026-03-10/
+https://www.geeksforgeeks.org/python/counters-in-python-set-1/
 
 
 
